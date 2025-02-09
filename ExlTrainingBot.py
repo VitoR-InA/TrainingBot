@@ -156,7 +156,7 @@ def on_connect_command(message):
         except ValueError: bot.send_message(message.chat.id, "user_id must match a integer value!")
 
 @bot.message_handler(commands = ["disconnect"])
-def on_connect_command(message):
+def on_disconnect_command(message):
     if message.chat.id in admin_list.keys():
         try:
             bot.send_message(admin_list[message.chat.id], "The administrator disconnected.")
